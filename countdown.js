@@ -1,23 +1,28 @@
+const MILLISECONDS_PER_DAY = 1000 * 60 * 60 * 24;
+const CHRISTMAS_DATE = "2024-12-25";
+const NEW_YEAR_DATE = "2025-01-01";
+const CHRISTMAS_ELEMENT_ID = "my-element";
+const NEW_YEAR_ELEMENT_ID = "my-element2";
 
-function calculateDaysUntil(targetDate) {
-    var today = new Date();
-    var target = new Date(targetDate);
-    return Math.round((target - today) / (1000 * 60 * 60 * 24));
-  }  
-
-function updateDaysUntil(elementId, targetDate) {
-  var daysUntil = calculateDaysUntil(targetDate);
-  var element = document.getElementById(elementId);
-  element.innerText = daysUntil;
-}
-
-function updateDaysUntilChristmas() {
-    updateDaysUntil("my-element", "2024-12-25");
-  }
+const calculateDaysUntil = (targetDate) => {
+    const today = new Date();
+    const target = new Date(targetDate);
+    return Math.round((target - today) / MILLISECONDS_PER_DAY);
+  };
   
-function updateDaysUntilNewYear() {
-    updateDaysUntil("my-element2", "2025-01-01");
-  }
+  const updateDaysUntil = (elementId, targetDate) => {
+    const daysUntil = calculateDaysUntil(targetDate);
+    const element = document.getElementById(elementId);
+    element.innerText = daysUntil;
+  };
+  
+  const updateDaysUntilChristmas = () => {
+    updateDaysUntil(CHRISTMAS_ELEMENT_ID, CHRISTMAS_DATE);
+  };
+  
+  const updateDaysUntilNewYear = () => {
+    updateDaysUntil(NEW_YEAR_ELEMENT_ID, NEW_YEAR_DATE);
+  };
   
   updateDaysUntilChristmas();
   updateDaysUntilNewYear();
