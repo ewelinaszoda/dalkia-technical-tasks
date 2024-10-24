@@ -49,7 +49,7 @@ The application is designed to be responsive, providing different layouts for mo
 
   - The layout displays countdown items in a row, allowing for a more spacious and organized appearance. Each countdown item takes up 30% of the width, providing a balanced look.
 
-  ![Mobile View](image-1.png)
+  ![Desktop View](image.png)
 
 ### Transitions
 
