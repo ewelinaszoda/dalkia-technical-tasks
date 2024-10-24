@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown Timer</title>
-    <link rel="stylesheet" href="countdown.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div>
-    <div>
-      <h3>Days until Christmas</h3>
-      <div id="christmas-countdown"></div>
+  <div class="container">
+    <h1>Countdown Timer</h1>
+    <div class="countdown">
+        <div class="countdown-item" id="christmas-countdown-item">
+            <p>Christmas: <span id="christmas-countdown"></span> days</p>
+        </div>
+        <div class="countdown-item" id="newyear-countdown-item">
+            <p>New Year: <span id="new-year-countdown"></span> days</p>
+        </div>
+        <div class="countdown-item" id="valentines-countdown-item">
+            <p>Valentine's Day: <span id="valentines-countdown"></span> days</p>
+        </div>
     </div>
-    <div>
-      <h3>Days until New Year</h3>
-      <div id="new-year-countdown"></div>
-    </div>
-    <div>
-        <h3>Days until Valentine's Day</h3>
-        <div id="valentines-countdown"></div>
-      </div>
-  </div>
+</div>
   <script src="countdown.js"></script>
 </body>
 </html>

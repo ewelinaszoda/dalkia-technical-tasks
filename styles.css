@@ -1,0 +1,138 @@
+:root {
+  --background-color: #f0f8ff; 
+  --container-border-color: #e0f7ff; 
+  --heading-color: #4682B4; 
+  --newyear-color: #FF69B4; 
+  --valentines-color: #FF4500; 
+  --christmas-color: #e0f7ff; 
+  --countdown-number-color: #e0f7ff; 
+  --text-color: #fff; 
+  --default-text-color: #333; 
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--default-text-color); 
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px; 
+  margin: auto;
+  text-align: center;
+  border: 2px solid var(--container-border-color); 
+  border-radius: 10px;
+  padding: 20px;
+  background-color: var(--text-color); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+h1 {
+  color: var(--heading-color); 
+}
+
+.countdown {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+}
+
+.countdown-item {
+  position: relative;
+  width: 100%; 
+  height: 200px; 
+  margin: 20px 0;
+  border-radius: 10px; 
+  overflow: hidden; 
+  color: var(--text-color); 
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  text-align: center; 
+  font-size: 1.5em; 
+  transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+#christmas-countdown-item {
+  background-image: url('images/christmas.avif');
+  background-size: cover; 
+  background-position: center; 
+}
+
+#newyear-countdown-item {
+  background-image: url('images/newyear.avif');
+  background-size: cover; 
+  background-position: center; 
+}
+
+#valentines-countdown-item {
+  background-image: url('images/valentines.avif');
+  background-size: cover; 
+  background-position: center; 
+}
+
+.countdown span {
+  font-weight: bold; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+  font-size: 1.5em; 
+}
+
+#newyear-countdown {
+  color: var(--newyear-color); 
+}
+
+#valentines-countdown {
+  color: var(--valentines-color); 
+}
+
+#christmas-countdown {
+  color: var(--christmas-color); 
+}
+
+@media (min-width: 768px) {
+  .countdown {
+    flex-direction: row; 
+    justify-content: space-around; 
+  }
+
+  .countdown-item {
+    width: 30%; 
+    height: 250px; 
+    margin: 10px; 
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 100%; 
+    padding: 10px; 
+  }
+
+  .countdown {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .countdown-item {
+    width: 90%; 
+    height: 200px; 
+    margin: 10px 0; 
+  }
+}
+
+.countdown-item p {
+  margin: 0; 
+}
+
+.countdown-item p span {
+  display: block; 
+  font-size: 1.5em; 
+}
+
+.countdown-item:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
